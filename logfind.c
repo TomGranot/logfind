@@ -31,6 +31,8 @@ glob_t get_log_list(void)
 	glob_t globstruct;
 	int rc;	
 	rc = glob("~/.logfind/*", GLOB_TILDE, NULL, &globstruct);
+	
+	// if you got a non-zero then there's an error.
 	if (rc != 0)
 	{
 		printf("There was an error with the glob function.");
@@ -62,8 +64,9 @@ int find_in_file(char *path_to_file,char *string_to_find)
 		{
 			find_counter++;
 		}
-		
 	}
+	
+	// if you found something, return 0
 	if(find_counter > 0)
 	{
 		return 0;
@@ -126,17 +129,16 @@ int main(int argc, char *argv[])
 			}
 			
 		// The case for when the -o flag is present: if the files conatin AT LEAST one of the words, then print the file name			
-		} else {
-			
+		} else {	
+			// if the counter is greater than 0 then print the file name. 
+			// AKA - logical OR.
 			if (arg_found_count > 0)
 			{
 				// prtinf just the filename, without the whole path
 				printf("%s\n", basename(paths.gl_pathv[idx_files]));
 			}
-			
 		}
 	}
-
-
+	
 	return 0;
 }
