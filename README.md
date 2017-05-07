@@ -27,5 +27,5 @@ I've added a few files for you to play with - just copy the folder to your user'
 
 1. `logfind` uses `strstr()`, so if you'll add the string "atom" to a file, for example, and then `logfind` my name -  you will get a match.
 2. `logfind` plays nice with whitespaces and newlines - try it our by messing with the files inside the `.logfind` folder.
-3. In the original exercise, .logfind is suppose to be a file - like the one here - with possible extensions to allow. My version does not support that - it searches through all possible files.
+3. In the original exercise, .logfind is suppose to be a file - [like the one here](https://github.com/zedshaw/learn-c-the-hard-way-lectures/blob/master/ex26/logfind.4/.logfind) - with possible extensions to allow. My version does not support that - it searches through all possible files.
 3. If you haven't seen Zed talk yet, you should - [link here](https://vimeo.com/53494258).
