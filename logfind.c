@@ -11,16 +11,16 @@ int check_args(int argc, char *argv[])
 
 	if (argc == 1) {
 		return 1; // There's only one argument (the program's name),
-			 	  // throw error
+			  // throw error
 	} else if (strcmp(argv[1], underscore_o) == 0 && argc == 2) {
 		return 2; // There's only an "-o" without a following
-				  // argument, throw error
+		          // argument, throw error
 	} else if (strcmp(argv[1], underscore_o) == 0 && argc > 2) {
 		return 3; // There's an "-o" and some other arguments after it,
-				  // this is logical OR and should be treated as such
+		          // this is logical OR and should be treated as such
 	} else {
 		return 0; // In all other cases, treat this as logcial AND and 
-				  // carry on
+		          // carry on
 	}
 }
 
@@ -30,6 +30,7 @@ glob_t get_log_list(void)
 {
 	glob_t globstruct;
 	int rc;	
+	// if you haven't placed .logfind in your root this will not work!
 	rc = glob("~/.logfind/*", GLOB_TILDE, NULL, &globstruct);
 	
 	// if you got a non-zero then there's an error.
@@ -38,6 +39,7 @@ glob_t get_log_list(void)
 		printf("There was an error with the glob function.");
 		exit(0);
 	}
+	
 	return globstruct;
 }
 
@@ -128,7 +130,8 @@ int main(int argc, char *argv[])
 				printf("%s\n", basename(paths.gl_pathv[idx_files]));
 			}
 			
-		// The case for when the -o flag is present: if the files conatin AT LEAST one of the words, then print the file name			
+		// The case for when the -o flag is present: if the files conatin AT LEAST one of the words,
+		//then print the file name			
 		} else {	
 			// if the counter is greater than 0 then print the file name. 
 			// AKA - logical OR.
