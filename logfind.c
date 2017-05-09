@@ -130,12 +130,11 @@ int main(int argc, char *argv[])
 				printf("%s\n", basename(paths.gl_pathv[idx_files]));
 			}
 			
-<<<<<<< HEAD
 		// The case for when the -o flag is present: if the files conatin AT LEAST one of the words, then print the file name			
-=======
+
 		// The case for when the -o flag is present: if the files conatin AT LEAST one of the words,
 		//then print the file name			
->>>>>>> 44c82e7828c2b9eee9db5a16189fa68e3d8acc5c
+
 		} else {	
 			// if the counter is greater than 0 then print the file name. 
 			// AKA - logical OR.
@@ -146,10 +145,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> 44c82e7828c2b9eee9db5a16189fa68e3d8acc5c
 	return 0;
 }
