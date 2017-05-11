@@ -13,13 +13,13 @@ So:
 
 `./logfind -o tom jack phil` will find all the files that contain "tom" **OR** "jack" **OR** "phil" inside `.logfind`.
 
-If it finds a file that matches the logic, it prints out the file name's once - even if the string appears more than once inside said file.
+If it finds a file that matches the logic, it prints out the file's name once - even if the string appears more than once inside said file.
 
 # The .logfind folder
 
-I've added a few files for you to play with - just copy the folder to your user's root and run the program from anywhere on your computer:
+I've added a few files for you to play with - just copy the folder to your user's root and run the program from anywhere on your computer (tilde exapnsions for finding the root is used):
 
-1. `yes.c` contains my name twice, on the same line.
+1. `yes.c` contains my name (tom) twice, on the same line.
 2. `middle.c` contains my name in "atom" and "tom" form, as wel as "jack" in the middle of the file.
 3. `no.c` does not contain "tom", "jack" nor "phil".
 
