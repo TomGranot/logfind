@@ -1,5 +1,5 @@
 # logfind
-My version of [Zed Shaw's programming challenge](https://learncodethehardway.org/c/).
+My version of [Zed Shaw's programming challenge](https://learncodethehardway.org/c/). This might seem like a weird repo to pin to the profile, but it turned out really pretty and I like it. :)
 
 # How it works
 `logfind` is a command-line utility designed to find strings inside any type of file. It uses the standard libray alone without any custom header files or OS-specific bits. It's longer than it should be, for sure, and if you have suggestions feel free to make a PR.
